@@ -1,0 +1,27 @@
+
+    Notes:
+    ------
+    Docker vs Virtual Machine:
+        1.  Docker does NOT replicate OS as VM - merely provides an interface/emulator instead
+                
+    Docker CLI:
+        Provides way to interact with Docker Rest API to Docker server
+
+    Docker File:
+        Defines the components that make up the Docker image using the Docker CLI
+
+    Docker Hub:
+        A large online repository for many popular Docker images
+
+    Desktop App:
+        Start an account with hub.docker.com and download
+        Confirm install with "docker --version" or "docker version"
+        View system installed images with "docker images -a"
+
+    Hello World App Example Image:
+        Navigate to "https://hub.docker.com/r/tutum/hello-world"
+        Run "docker pull tutum/hello-world"
+        Run "docker run -p 3001:80 tutum/hello-world"
+        Confirm is running by typing "docker ps" and navigating to "http://localhost:3001/"
+        Stop app by typing "docker stop a706ee2c7afa" (a706ee2c7afa = container ID)
+        Start app by typing "docker start a706ee2c7afa"
