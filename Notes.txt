@@ -9,9 +9,14 @@
 
     Docker File:
         Defines the components that make up the Docker image using the Docker CLI
+        Find Base Image with: "wsl -l -v"
 
     Docker Hub:
         A large online repository for many popular Docker images
+        Push to Docker Hub:
+            1.  Login at prompt with "docker login"
+            2.  If image is NOT tagged, assign it a tag (ie. "docker tag d127278dda39 nwdave1/nodejs-app")
+            3.  Push to Docker Hub via prompt (ie. "docker push nwdave1/nodejs-app")
 
     Desktop App:
         Start an account with hub.docker.com and download
@@ -23,5 +28,9 @@
         Run "docker pull tutum/hello-world"
         Run "docker run -p 3001:80 tutum/hello-world"
         Confirm is running by typing "docker ps" and navigating to "http://localhost:3001/"
-        Stop app by typing "docker stop a706ee2c7afa" (a706ee2c7afa = container ID)
+        Stop app by typing "docker run -p 3004:4000 d127278dda39" (d127278dda39 = image ID)
         Start app by typing "docker start a706ee2c7afa"
+
+    Dockerfile:
+        Used to construct Docker Container with the command: "docker build ."
+        After the build, an image may NOT be visible in VS. To see it, type "docker images"
