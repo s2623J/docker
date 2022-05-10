@@ -34,3 +34,25 @@
     Dockerfile:
         Used to construct Docker Container with the command: "docker build ."
         After the build, an image may NOT be visible in VS. To see it, type "docker images"
+
+    Kubernetes:
+        Used to automate deployments with scaling and automation services
+        Image:  Master controls the deployed/load-balanced instances
+            Key-Value Store:    Contains configuration data
+            Pod:                Think container of containers
+            Kube-Proxy:         Manages IP 
+            Kublet:             Constantly communicates with the api-Server
+        Kubernetes Minikube:
+            Tool that makes it easy to run Kubernetes locally.
+            Runs a single-node Kubernetes cluster inside a local VM 
+            Installation:   https://minikube.sigs.k8s.io/docs/start/
+            Installation:   https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/#install-kubectl-binary-with-curl-on-windows
+            Installation:   https://www.virtualbox.org/wiki/Downloads
+            Start with:                     "minikube start"
+            Check status with:              "minikube status"
+            Verify active services with:    "kubectl get services"
+            Configuration for the deployment is detailed in a ".yaml" file
+            Create a deployment with:       "kubectl create -f .\tutum-deployment.yaml"
+            Display Dashboard with:         "minikube dashboard"
+            Launch in browser by right-clcking on service and selecting "Launch in browser"
+            
